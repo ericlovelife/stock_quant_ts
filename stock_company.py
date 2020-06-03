@@ -6,6 +6,10 @@ import tushare as ts
 import datetime
 
 def save_stock_company():
+    '''
+    获取上市公司基础信息，单次提取4000条，可以根据交易所分批提取    
+    :return:
+    '''
     engine = create_engine('mysql+pymysql://root:root@localhost:3306/stock_quant?charset=utf8')
     ts.set_token('428031aafb294e841ad21237fca19c91d0483e83435294728abcffeb')
     pro = ts.pro_api()
